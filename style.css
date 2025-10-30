@@ -1,0 +1,124 @@
+:root {
+  --bg-1: #f6fbff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0b74ff;
+  --accent-strong: #085ec4;
+  --danger: #e03b3b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg-1), #f7f9fb);
+  margin: 0;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #111827;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  background: var(--card);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+h1 {
+  margin: 0 0 12px 0;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #0f172a;
+}
+
+h3 {
+  color: var(--muted);
+  margin: 20px 0 8px 0;
+  font-weight: 600;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  margin: 6px 0 12px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.08);
+  background: #fbfdff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: rgba(11,116,255,0.8);
+  box-shadow: 0 4px 14px rgba(11,116,255,0.08);
+}
+
+button {
+  display: inline-block;
+  padding: 10px 14px;
+  margin: 6px 0;
+  border-radius: 9px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+button:hover {
+  background: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+button[onclick^="loadRecords"] {
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid rgba(15,23,42,0.06);
+}
+
+.record {
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  margin: 10px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.record b { color: #0f172a; }
+.record small { color: var(--muted); }
+
+.delete-btn {
+  background: var(--danger);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover { filter: brightness(0.95); transform: translateY(-1px); }
+
+@media (min-width: 520px) {
+  .row {
+    display: flex;
+    gap: 12px;
+  }
+  .row input { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .container { padding: 18px; }
+  h1 { font-size: 1.25rem; }
+}

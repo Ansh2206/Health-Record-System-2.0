@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Records System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Health Records System</h1>
+
+    <h3>Add Patient Record</h3>
+    <input id="name" placeholder="Name"><br>
+    <input id="age" placeholder="Age"><br>
+    <input id="gender" placeholder="Gender"><br>
+    <input id="disease" placeholder="Disease"><br>
+    <button onclick="addRecord()">Add Record</button>
+
+    <h3>All Records</h3>
+    <button onclick="loadRecords()">Load Records</button>
+    <div id="records"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
